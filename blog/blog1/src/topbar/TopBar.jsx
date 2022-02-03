@@ -21,7 +21,8 @@ export default function TopBar() {
       <div className="topRight">
         <img
           className="topImg"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS4qL35EpxgV4L_IOOFfkqDA5Ch8wp49wLRw&usqp=CAU"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhfhuzR5Ncdnoq5LOxfn3aP4WrDD6zTbpmjRuuYSVQDXM11YAQnEmqX-tGJ49M_7cfcas&usqp=CAU"
+          alt=""
         />
         <i className="topSearchIcon fas fa-search"></i>
       </div>
