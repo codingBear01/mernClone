@@ -1,5 +1,7 @@
 import TopBar from "./topbar/TopBar";
 import Home from "./pages/home/Home";
+import Sidebar from "./sidebar/Sidebar";
+import Posts from "./posts/Posts";
 
 function App() {
   return (
