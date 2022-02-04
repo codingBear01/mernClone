@@ -2,8 +2,10 @@ const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const authRoute = require("./routes/auth");
 
 dotenv.config();
+app.use(express.json());
 
 mongoose
   .connect(process.env.MONGO_URL)
@@ -20,6 +22,8 @@ await mongoose.connect('mongodb://localhost:27017/test', {
   useNewUrlParser: true, // <-- no longer necessary
   useUnifiedTopology: true // <-- no longer necessary
 });*/
+
+app.use("/api/auth", authRoute);
 
 app.listen("5000", () => {
   console.log("Backend is running!");
