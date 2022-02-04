@@ -27,6 +27,7 @@ await mongoose.connect('mongodb://localhost:27017/test', {
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
 app.listen("5000", () => {
   console.log("Backend is running!");
