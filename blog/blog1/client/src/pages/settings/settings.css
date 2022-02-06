@@ -80,3 +80,9 @@
   margin-top: 20px;
   cursor: pointer;
 }
+
+.updated-msg {
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
