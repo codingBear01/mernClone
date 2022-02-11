@@ -17,10 +17,19 @@ mongoose.connect(process.env.MONGO_URL, () => {
 
 //after created app and connection to mongoDB you can write middlewares
 //middleware
-app.use(express.json());
+app.use(express.json()); //this is body parser when you make post request it's gonna parser it
 /*(property) Application<Record<string, any>>.use: (...handlers: RequestHandler<ParamsDictionary, any, any, qs.ParsedQs, Record<string, any>>[]) => Express (+8 overloads)*/
 /*var e.json: (options?: bodyParser.OptionsJson) => createServer.NextHandleFunction
 Returns middleware that only parses json and only looks at requests where the Content-Type header matches the type option. */
+
+app.use(helmet());
+app.use(morgan("common"));
+/*
+(alias) morgan<Request<ParamsDictionary, any, any, qs.ParsedQs, Record<string, any>>, Response<any, Record<string, any>, number>>(format: "common", options?: morgan.Options<...>): Handler<...> (+6 overloads)
+import morgan
+Standard Apache common log output. :remote-addr - :remote-user [:date] ":method :url HTTP/:http-version" :status :res[content-length]
+*/
+
 app.listen(8800, () => {
   console.log("backend is running!");
 });
